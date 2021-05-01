@@ -72,15 +72,14 @@ class CustomDataset(torch.utils.data.Dataset):
         # else:
         #     pass
 
-        all_images = glob.glob(os.path.join(self.imgs_folder, '*.tif'))
+        all_images = glob.glob(os.path.join(self.imgs_folder, '*.npy'))
         all_images.sort()
 
-        all_labels = glob.glob(os.path.join(self.labels_folder, '*.tif'))
+        all_labels = glob.glob(os.path.join(self.labels_folder, '*.npy'))
         all_labels.sort()
 
-        # image = Image.open(all_images[index])
-        image = tiff.imread(all_images[index])
-        label = tiff.imread(all_labels[index])
+        image = np.load(all_images[index])
+        label = np.load(all_labels[index])
 
         label_origin = np.array(label, dtype='float32')
         image = np.array(image, dtype='float32')
@@ -301,7 +300,7 @@ class CustomDataset(torch.utils.data.Dataset):
 
     def __len__(self):
         # You should change 0 to the total size of your dataset.
-        return len(glob.glob(os.path.join(self.labels_folder, '*.tif')))
+        return len(glob.glob(os.path.join(self.labels_folder, '*.npy')))
 
 
 # ============================================================================================

@@ -24,17 +24,32 @@ if __name__ == '__main__':
     # 'all_filp', 'gaussian' or 'none'.
     # 9. The results will be genereted in a new folder called Results.
 
-    trainModels(data_directory='./datasets/',
-                dataset_name='multiclass',
-                input_dim=4,
-                class_no=4,
+    # trainModels(data_directory='./datasets/',
+    #             dataset_name='multiclass',
+    #             input_dim=4,
+    #             class_no=4,
+    #             repeat=1,
+    #             train_batchsize=4,
+    #             validate_batchsize=1,
+    #             num_epochs=1,
+    #             learning_rate=1e-3,
+    #             width=64,
+    #             network='unet',
+    #             augmentation='full'
+    #             )
+
+    trainModels(data_directory='/cluster/project2/Neuroblastoma/',
+                dataset_name='data',
+                input_dim=3,
+                class_no=2,
                 repeat=1,
-                train_batchsize=4,
+                train_batchsize=2,
                 validate_batchsize=1,
-                num_epochs=1,
+                num_epochs=100,
                 learning_rate=1e-3,
-                width=64,
+                width=32,
                 network='unet',
                 augmentation='full'
                 )
+
 
