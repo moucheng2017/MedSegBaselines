@@ -170,4 +170,4 @@ dependencies:
     - joblib==1.0.1
     - scikit-learn==0.24.1
     - threadpoolctl==2.1.0
-prefix: /home/moucheng/anaconda3/envs/env2021
+prefix: /cluster/project2/Neuroblastoma/MedSegBaselines/env2021
