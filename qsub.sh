@@ -5,4 +5,4 @@
 #$ -j y
 #$ -wd /cluster/project2/Neuroblastoma/MedSegBaselines
 
-~/cluster/project2/Neuroblastoma/MedSegBaselines Run_test.py
+~/miniconda3/envs/env2021/bin/python Run_test.py
