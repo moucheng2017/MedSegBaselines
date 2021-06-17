@@ -5,4 +5,4 @@
 #$ -j y
 #$ -wd /cluster/project2/Neuroblastoma/MedSegBaselines
 
-~/cluster/project2/Neuroblastoma/MedSegBaselines Run_test.py
+~ /cluster/project2/Neuroblastoma/MedSegBaselines Run_test.py
